@@ -1,12 +1,26 @@
-import logoImg from '../../assets/logo.svg'
-import { Container, Content } from './styles'
+import { useState } from 'react';
+import logoImg from '../../assets/logo.svg';
+import Modal from 'react-modal';
+import { Container, Content } from './styles';
 
 export function Header() {
+
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
+
+  function handleOpenNewTransactionModal(){
+    setIsNewTransactionModalOpen(true);
+  }
+
+  function handleCloseNewTransactionModal(){
+    setIsNewTransactionModalOpen(false);
+  }
+
+
   return (
     <Container>
         <Content>
             <img src={logoImg} alt="dbmoney" />
-            <button type="button">
+            <button type="button" onClick={handleOpenNewTransactionModal}>
                 Nova Transação
             </button>
         </Content>
