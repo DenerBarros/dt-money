@@ -4,8 +4,6 @@ import outcomeImg from '../../assets/outcome.svg';
 import totalImg from '../../assets/total.svg';
 
 
-
-
 export  function Summary() {
   return (
     <Container>
@@ -18,14 +16,14 @@ export  function Summary() {
       </div>
       <div>
         <header>
-          <p>Entradas</p>
+          <p>Saída</p>
           <img src={outcomeImg} alt="Saidas" />
         </header>
         <strong>- R$500,00</strong>
       </div>
       <div className="highlight-background">
         <header>
-          <p>Entradas</p>
+          <p>Total</p>
           <img src={totalImg} alt="Saidas" />
         </header>
         <strong>R$500,00</strong>
